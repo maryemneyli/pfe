@@ -1,0 +1,23 @@
+<link rel="stylesheet" type="text/css" href="flat-ui.css">
+
+<div ng-controller="PerformanceController as vm">
+  <!-- <md-content ng-show="$showOptions" class="options"> -->
+    <!-- <md-radio-group ng-model="vm.performancePeriod" ng-change="vm.changePeriod()"> -->
+      <!-- <md-radio-button  value="week">Last week</md-radio-button> -->
+      <!-- <md-radio-button  value="month">Last month</md-radio-button> -->
+    <!-- </md-radio-group> -->
+  <!-- </md-content> -->
+
+  <!-- <md-content class="md-padding"> -->
+    <!-- <nvd3 options="vm.chartOptions" data="vm.performanceChartData"></nvd3> -->
+  <!-- </md-content> -->
+  <div class="bootstrap-switch-square">
+
+  <input type="checkbox" ng-model="vm.test" checked data-toggle="switch" class="bootstrap-switch bootstrap-switch-square" id="switch-01" />
+</div>
+  <md-button layout="row" layout-align="center center" class="md-toolbar-tools md-warn"
+               ui-sref="home.profile">
+     <img ng-show="vm.test" ng-src="assets/images/gas.svg" />
+     <img  ng-hide="vm.test" ng-src="assets/images/power.svg" />
+    </md-button>
+</div>
